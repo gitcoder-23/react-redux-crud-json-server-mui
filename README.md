@@ -2,7 +2,7 @@
 
 ## Available Packages
 
-npm i axios react-redux redux redux-logger redux-thunk @material-ui/core
+npm i axios react-redux redux redux-logger redux-thunk @material-ui/core uuid
 npm i react-router-dom@5.3.0
 
 # for updated material
