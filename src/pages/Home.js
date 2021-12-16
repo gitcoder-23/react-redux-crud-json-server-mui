@@ -48,12 +48,14 @@ const Home = () => {
     dispatch(loadUsers());
   }, []);
   if (loading) {
-    <div className="loader-css">
-      <p>Loading...</p>
-    </div>;
+    return (
+      <div className="loader-css">
+        <p>Loading...</p>
+      </div>
+    );
   }
   if (isError) {
-    <p>Something went wrong!</p>;
+    return <p>Something went wrong!</p>;
   }
   return (
     <div style={{ marginTop: '20px' }}>
@@ -82,7 +84,7 @@ const Home = () => {
           </TableHead>
           <TableBody>
             {allUsers &&
-              allUsers.reverse().map((userData, index) => (
+              allUsers.map((userData, index) => (
                 <StyledTableRow key={userData.id}>
                   <StyledTableCell component="th" scope="row">
                     {index + 1}
