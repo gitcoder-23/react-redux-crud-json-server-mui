@@ -36,7 +36,7 @@ const EditUser = () => {
     if (!name || !address || !email || !contact) {
       setError('Please fill all fields..');
     } else {
-      // console.log('addNewUser-->', addNewUser(addUserState));
+      // console.log('editNewUser-->', updateSingleUser(editUserState));
       dispatch(updateSingleUser(editUserState, userId));
       history.push('/');
       setError('');
